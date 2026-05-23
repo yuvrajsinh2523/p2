@@ -1,0 +1,25 @@
+<% layout("layout/design.ejs")%>
+<body>
+    
+    <form action="/show/<%=details._id%>?_method=PUT" method="post">
+
+        <label for="" class="form-label">Edit a title: </label>
+        <input  class="form-control" type="text" name="add[title]" value="<%=details.title%>" placeholder="Enter chocolate name">
+        <br>
+        <label class="form-label" for="">
+            Edit About chocolate:
+        </label><br>
+        <textarea class="form-control" name="add[description]" id="" placeholder="Enter about chocolate" cols="35" rows="7"><%=details.description%></textarea>
+        
+        <br>
+        <label class="form-label" for="">Edit price of chocoale(1 pis):</label>
+        <input class="form-control" type="text" name="add[price]" placeholder="(1pis )" value="<%=details.price%>">
+        <br>
+        <label class="form-label" for="">
+            Edit the chocolate image URL:
+        </label>
+        <input class="form-control" class="form-label" type="text" name="add[image][url]" placeholder="Enter url of you chocolate" value="<%=details.image.url%>">
+        <br>
+        <button class="btn btn-dark btn-icon" >Final</button>
+    </form>
+</body>
