@@ -1,0 +1,27 @@
+<% layout("layout/design.ejs")%>
+<body>
+
+
+    <form action="/new" method="post">
+
+        <label for="" class="form-label">Enter a title: </label>
+        <input type="text" name="add[title]" class="form-control" placeholder="Enter chocolate name">
+        <br>
+        <label for="" class="form-label">
+            Enter About chocolate:
+        </label>
+        <textarea name="add[description]" class="form-control" id="" placeholder="Enter about chocolate" rows="4" ></textarea>
+        
+        <br>
+        <label class="form-label" for="">Enter price of chocoale(1 pis):</label>
+        <input type="text" name="add[price]" class="form-control" placeholder="(1pis )">
+        <br>
+        <label class="form-label" for="">
+            Enter the chocolate image URL:
+        </label>
+        <input type="text" name="add[image][url]" class="form-control" placeholder="Enter url of you chocolate">
+        <br>
+        <button class="btn btn-dark edit-btn ">List it </button>
+    </form>
+</body>
+
